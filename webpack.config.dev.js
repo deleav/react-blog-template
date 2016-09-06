@@ -6,7 +6,7 @@ module.exports = {
     // 'webpack-dev-server/client?http://0.0.0.0:8080', // WebpackDevServer host and port
     'webpack/hot/dev-server', // "only-dev-server" 可以避免在語法錯誤時重新載入
     './src/index.jsx',
-    './src/assets/style.scss'
+    './src/assets/index.js'
   ],
   output: {
     path: path.join(__dirname, 'build'),
@@ -19,17 +19,21 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js|jsx$/, loaders: ['react-hot', 'babel'],
+        test: /\.js|jsx$/,
+        loaders: ['react-hot', 'babel'],
         include: path.join(__dirname, 'src')
-      },
-      {
-        test: /\.scss$/, loaders: ['sass'],
-        include: path.join(__dirname, '/src/assets/style.scss')
+      }, {
+        test: /\.css$/,
+        loaders: ['style', 'css?sourceMap']
+      }, {
+        test: /\.scss$/,
+        loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
       }
     ]
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin()
   ],
-  devtool: 'eval'
+  devtool: 'eval',
+  watch: true
 }

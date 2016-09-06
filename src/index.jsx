@@ -1,5 +1,4 @@
 /* main.js */
-
 'use strict';
 
 import React from 'react';
