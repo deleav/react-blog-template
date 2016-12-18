@@ -3,29 +3,17 @@
 
 import React from 'react';
 import { render } from 'react-dom';
-import TestOne from './components/TestOne';
-import TestTwo from './components/TestTwo';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import App from './containers/App';
+import todoApp from './reducers/AppReducers';
 
-class Main extends React.Component {
-  constructor( props ) {
-    super( props );
-    this.state = {
-      switch: true
-    }
-  }
-  _toggle = () => {
-    this.setState({
-      switch: !this.state.switch
-    });
-  }
-  render() {
-    return (
-      <div>
-        <input type="button" onClick={this._toggle} value="Press Me!"/>
-        {this.state.switch ? <TestOne /> : <TestTwo />}
-      </div>
-    );
-  }
-}
+let rootElement = document.getElementById('mountNode');
+let store = createStore( todoApp, window.devToolsExtension ? window.devToolsExtension() : undefined );
 
-render(<Main />, document.getElementById('mountNode'));
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  rootElement
+);
