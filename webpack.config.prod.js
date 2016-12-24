@@ -13,7 +13,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'build'),
     filename: 'bundle.js',
-    publicPath: '/build/'
+    publicPath: ''
   },
   resolve: {
     extensions: ['', '.js', '.jsx', '.css', '.scss']
@@ -27,6 +27,9 @@ module.exports = {
       }, {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('css!sass')
+      }, {
+        test: /\.(jpe?g|JPE?G|png|PNG|gif|GIF|svg|SVG|woff|woff2|eot|ttf)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=1024&name=img/[sha512:hash:base64:7].[ext]'
       }
     ]
   },

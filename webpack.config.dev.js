@@ -30,7 +30,7 @@ module.exports = {
         loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
       }, {
         test: /\.(jpe?g|JPE?G|png|PNG|gif|GIF|svg|SVG|woff|woff2|eot|ttf)(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'url?limit=1024&name=[sha512:hash:base64:7].[ext]'
+        loader: 'url?limit=1024&name=img/[sha512:hash:base64:7].[ext]'
       }
     ]
   },
