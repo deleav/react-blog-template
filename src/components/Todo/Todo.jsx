@@ -4,6 +4,7 @@ export default class Todo extends Component {
   render() {
     return (
       <li onClick={ this.props.onClick }
+        className="todo"
         style={{
           textDecoration: this.props.completed ? 'line-through' : 'none',
           cursor: 'pointer'

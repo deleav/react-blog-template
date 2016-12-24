@@ -3,7 +3,7 @@ import React, { Component, PropTypes } from 'react';
 export default class AddTodo extends Component {
   render() {
     return (
-      <div>
+      <div className="addTodo">
         <input type='text' ref='todo' />
         <button onClick={(e) => this.handleClick(e)}>
           ADD

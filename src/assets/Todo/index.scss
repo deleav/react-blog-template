@@ -1,0 +1,29 @@
+.app {
+  // background-color: teal;
+  width: 600px;
+  margin: auto;
+  padding-top: 10px;
+
+  .addTodo {
+    width: 220px;
+    margin: auto;
+    & > input {
+      width: 150px;
+      margin-right: 15px;
+      border-radius: 8px;
+    }
+  }
+
+  .todoList {
+    margin: auto;
+    width: 400px;
+
+    .todo {
+      margin-top: 8px;
+      padding: 5px;
+      border: 1px solid;
+      border-radius: 10px;
+      box-shadow: 3px 3px 5px grey;
+    }
+  }
+}

@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     const { dispatch, todos } = this.props
     return (
-      <div>
+      <div className="app">
         <AddTodo onAddClick={text=>dispatch(addTodo(text))}/>
         <TodoList todos={todos} onTodoClick={index=>dispatch(toggleTodo(index))}/>
       </div>
