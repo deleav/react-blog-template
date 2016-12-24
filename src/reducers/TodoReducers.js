@@ -1,4 +1,4 @@
-import { ADD_TODO, TOGGLE_TODO } from "../actions/TodoActions";
+import { ADD_TODO, TOGGLE_TODO, DELETE_TODO } from "../actions/TodoActions";
 
 export function todos( state = [], action ) {
   switch( action.type ) {
@@ -10,6 +10,10 @@ export function todos( state = [], action ) {
           completed: false
         }
       ];
+    case DELETE_TODO:
+      let nextState = [...state];
+      nextState.splice(action.index, 1);
+      return nextState;
     case TOGGLE_TODO:
       return state.map((todo, index) => {
         if (index === action.index)

@@ -6,11 +6,13 @@ export default class Todo extends Component {
       <li onClick={ this.props.onClick }
         className="todo"
         style={{
-          textDecoration: this.props.completed ? 'line-through' : 'none',
+          boxShadow: this.props.completed ? 'none' : '3px 3px 5px grey',
+          borderColor: this.props.completed ? 'green' : 'lightgrey',
           cursor: 'pointer'
           // this.props.completed ? 'default' :
         }}>
         { this.props.text }
+        <span className="close" onClick={ this.props.onDelete }></span>
       </li>
     )
   }
