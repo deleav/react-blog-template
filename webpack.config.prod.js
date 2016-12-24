@@ -26,8 +26,7 @@ module.exports = {
         include: path.join(__dirname, 'src')
       }, {
         test: /\.scss$/,
-        // loaders: ['css?sourceMap', 'sass?sourceMap']
-        loader: ExtractTextPlugin.extract('style', 'css?sourceMap!', 'sass?sourceMap')
+        loader: ExtractTextPlugin.extract('css!sass')
       }
     ]
   },
