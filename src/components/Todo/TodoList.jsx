@@ -3,7 +3,6 @@ import Todo from './Todo';
 
 export default class TodoList extends Component {
   render() {
-    console.log(this.props.todos);
     return (
       <ol className="todoList">
         {this.props.todos.map((todo, index) =>
