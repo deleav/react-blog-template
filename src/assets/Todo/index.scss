@@ -13,7 +13,7 @@ body {
     opacity: 0.8;
     width: 220px;
     margin: auto;
-    & > input {
+    & > input[type=text] {
       width: 150px;
       margin-right: 15px;
       border-radius: 8px;
