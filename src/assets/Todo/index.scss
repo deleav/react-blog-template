@@ -9,10 +9,24 @@ body {
   margin: auto;
   padding-top: 10px;
 
-  .addTodo {
+  .filterList {
     opacity: 0.8;
     width: 220px;
     margin: auto;
+
+    .clicked {
+      opacity: 0.5;
+    }
+
+    .unclicked {
+      opacity: 0.8;
+    }
+  }
+
+  .addTodo {
+    opacity: 0.8;
+    width: 220px;
+    margin: 10px auto;
     & > input[type=text] {
       width: 150px;
       margin-right: 15px;
