@@ -26,13 +26,25 @@ class App extends Component {
 }
 
 function getVisibilityTodos( todos, filter ) {
+  let visibleTodos = [];
   switch( filter ) {
     case VisibilityFilters.SHOW_ALL:
-      return todos;
+      todos.map(( todo, index ) => {
+        visibleTodos.push( { index, ...todo } );
+      });
+      return visibleTodos;
     case VisibilityFilters.SHOW_COMPLETED:
-      return todos.filter(todo => todo.completed);
+      todos.map(( todo, index ) => {
+        if ( todo.completed )
+          visibleTodos.push( { index, ...todo } );
+      });
+      return visibleTodos;
     case VisibilityFilters.SHOW_ACTIVE:
-      return todos.filter(todo => !todo.completed);
+      todos.map(( todo, index ) => {
+        if ( !todo.completed )
+          visibleTodos.push( { index, ...todo } );
+      });
+      return visibleTodos;
   }
 }
 
