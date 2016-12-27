@@ -1,9 +1,11 @@
 # react-redux-todoList
-### DEMO
+## DEMO
   * [DEMO](https://deleav.github.io/react-redux-todoList/)
 
-### Usage
+## Usage
   * npm i
   * npm start
   * then [click me](http://localhost:8080/)
-  * background-image problem still not resolve
+
+## Problem
+  * background-image problem(can't show) still not resolve
