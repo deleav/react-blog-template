@@ -1,3 +1,4 @@
 # react-redux-todoList
-  * npm i
-  * npm start
+  1. npm i
+  2. npm start
+  3. http://localhost:8080
