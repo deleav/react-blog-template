@@ -1,12 +1,12 @@
 import React, { Component, PropTypes } from 'react';
-import Todo from './Todo';
+import TodoItem from './TodoItem';
 
 export default class TodoList extends Component {
   render() {
     return (
       <ol className="todoList">
         {this.props.todos.map((todo, index) =>
-          <Todo {...todo}
+          <TodoItem {...todo}
                 key={index}
                 onClick={ () => this.props.onTodoClick( todo.index ) }
                 onDelete={ () => this.props.onDeleteClick( todo.index ) }

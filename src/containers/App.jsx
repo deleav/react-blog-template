@@ -48,11 +48,11 @@ function getVisibilityTodos( todos, filter ) {
   }
 }
 
-function select( state ) {
+function mapStateToProps( state ) {
   return {
     visibleTodos: getVisibilityTodos( state.todos, state.visibilityFilter ),
     visibilityFilter: state.visibilityFilter
   };
 }
 
-export default connect( select )(App);
+export default connect( mapStateToProps )(App);

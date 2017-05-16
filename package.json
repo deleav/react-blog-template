@@ -27,7 +27,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "prod": "webpack --config webpack.config.prod",
+    "build": "webpack --config webpack.config.prod",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
