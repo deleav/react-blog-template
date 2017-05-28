@@ -1,0 +1,72 @@
+@import './public.scss';
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  padding-top: 40px;
+  margin: 0;
+}
+
+#mountNode, #postApp {
+  min-height: 100%;
+}
+
+#postEditor {
+  min-height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  & > textarea {
+    width: 100%;
+    padding: 10px;
+  }
+  .postEditorBA {
+    height: 40px;
+    & button {
+      margin-left: 3px;
+    }
+  }
+}
+
+#postList {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid green;
+}
+
+.postItem {
+  height: 400px;
+  border: 2px solid lightblue;
+  margin-bottom: 20px;
+  padding: 10px;
+  .postTitle {
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 1em;
+    display: block;
+    color: #000;
+    text-decoration: none;
+  }
+  .postImg {
+    margin-top: 10px;
+    height: 40px;
+    width: 40px;
+    background-color: lightgreen;
+  }
+  .postContent {
+    border: 1px solid lightcoral;
+    margin-top: 10px;
+    padding: 5px;
+    overflow: hidden;
+  }
+}
