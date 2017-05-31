@@ -25,7 +25,7 @@ module.exports = {
         loaders: ['babel'],
         include: path.join(__dirname, 'src')
       }, {
-        test: /\.scss$/,
+        test: /\.scss|css$/,
         loader: ExtractTextPlugin.extract('css!sass')
       }, {
         test: /\.(jpe?g|JPE?G|png|PNG|gif|GIF|svg|SVG|woff|woff2|eot|ttf)(\?v=\d+\.\d+\.\d+)?$/,
