@@ -1,6 +1,6 @@
-# react-redux-todoList
-<!--## DEMO
-  * [DEMO](https://deleav.github.io/react-blog-template/)-->
+# react-blog-template
+## DEMO
+  * [DEMO](https://deleav.github.io/react-blog-template/)
 
 ## Usage
   * npm i
